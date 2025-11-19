@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: #0a0a2a;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #1a1a3a;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 3px solid #8b0000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header-text {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.author-name {
+    font-style: italic;
+    color: #ff6b6b;
+    font-size: 1.1rem;
+}
+
+nav {
+    background: #2d1b2e;
+    padding: 1rem 0;
+    border-bottom: 2px solid #8b0000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background: #8b0000;
+}
+
+main {
+    padding: 3rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.movie-card {
+    background: #1a1a3a;
+    border-radius: 15px;
+    padding: 2rem;
+    border: 2px solid #2d1b2e;
+}
+
+.movie-card:hover {
+    border: 2px solid #8b0000;
+    background: #2d1b2e;
+}
+
+.movie-logo {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.movie-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.rating {
+    color: #ffd700;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.movie-card p {
+    color: #b0b0b0;
+    line-height: 1.6;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.request-section {
+    background: #1a1a3a;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #2d1b2e;
+    margin-top: 2rem;
+}
+
+.request-section p {
+    margin-bottom: 2rem;
+    color: #b0b0b0;
+    font-size: 1.2rem;
+}
+
+.request-btn {
+    display: inline-block;
+    background: #8b0000;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.request-btn:hover {
+    background: #a00000;
+}
+
+.note {
+    margin-top: 1.5rem;
+    color: #888;
+    font-style: italic;
+}
+
+footer {
+    background: #1a1a3a;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    border-top: 3px solid #8b0000;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-text {
+    color: #b0b0b0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav a {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .movie-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .movie-card {
+        padding: 1.5rem;
+    }
+
+    .movie-logo {
+        height: 200px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .request-section {
+        padding: 2rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .movie-card {
+        padding: 1.2rem;
+    }
+
+    .request-btn {
+        padding: 1rem 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .movie-card h3 {
+        font-size: 1.3rem;
+    }
+}
